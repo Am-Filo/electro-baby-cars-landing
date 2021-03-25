@@ -1,0 +1,63 @@
+.present {
+	@include btn-gradient-only(to right, #39009F, #7000A5, #9500A8);
+	padding: 50px 0px 130px 0;
+
+	@include b(mobile) {
+		padding: 50px 0 20px 0;
+	}
+
+	.container {
+		
+		@include b(mobile) {
+			padding: 0;
+		}
+
+		@include b(tablet) {
+			padding: 0;
+			width: 100%;
+		}
+
+		.present_wrap {
+			position: relative;
+
+			@include b(mobile) {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				height: 100%;
+			}
+
+			@include before-img(inline-block, 100%, 505px, a) {
+				background-image: url(../img/prop/car-bow.png);
+				background-repeat: no-repeat;
+				background-position: 110px 0px;
+				margin: 0 30px 0 0;
+				top: 100px;
+				left: 0;
+				z-index: 3;
+				@include b(tablet) {
+					background-position: 0px 0px;
+				}
+				@include b(mobile) {
+					background-position: -45px 0px;
+					top: 80px;
+				}
+			}
+
+			.present_title {
+				font-size: 40px;
+				color: white;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 1;
+				font-weight: 700;
+
+				@include b(mobile) {
+					font-size: 25px;
+				}
+			}
+
+		}
+	}
+}

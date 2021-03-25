@@ -1,0 +1,84 @@
+.lead_form_bottom {
+	float: right;
+	margin-right: 80px;
+	width: 385px;
+	position: relative;
+	z-index: 10;
+	top: 50px;
+	@include b(tablet) {
+		margin-right: 0;
+	}
+	@include b(mobile) {
+		margin-top: 380px;
+		margin-right: 0;
+		width: 100%;
+		top: 0;
+		padding: 0 15px;
+	}
+
+	@include before-img(inline-block, 130px, 130px, a) {
+		background-image: url(../img/prop/akcia.png);
+		background-repeat: no-repeat;
+		top: -70px;
+		right: 40px;
+
+		@include b(mobile) {
+			right: 25px;
+		}
+	}
+
+	.lead_form {
+		&_top {
+			padding: 45px 30px 60px 20px;
+			height: 380px;
+			line-height: 1.3;
+			background-size: contain;
+			background-image: url(../img/prop/form-bg-2.png);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+
+			@include b(mobile) {
+				width: 100%;
+				padding: 0;
+				margin: 0;
+				background: white;
+			}
+
+			&_title {
+				margin: 0;
+				padding: 0;
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 900;
+			}
+
+			&_text {
+				padding: 0;
+				padding-top: 10px;
+				margin: 0;
+				font-weight: 600;
+				line-height: 1;
+				font-size: 13px;
+			}
+
+			form {
+				margin-top: 20px;
+				width: 340px;
+
+				.form-group {
+					&_button {
+						padding: 20px 10px 0 10px;
+						display: flex;
+						justify-content: space-between;
+					}
+				}
+			}
+		}
+	}
+
+	// .img-sticker {
+	// 	position: absolute;
+	// 	top: -70px;
+	// 	right: 40px;
+	// }
+}

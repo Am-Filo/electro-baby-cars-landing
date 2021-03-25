@@ -1,0 +1,72 @@
+.delivery-pay {
+	padding: 30px 0;
+	@include btn-gradient-only(to right, #39009F, #7000A5, #9500A8);
+
+	.container {
+		padding: 0;
+
+		.delivery-pay_wrap {
+			text-align: center;
+
+			@include after-img(inline-block, 100%, 470px, r) {
+				background-position: center;
+				background-repeat: no-repeat;
+				top: -10px;
+				background-image: url(../img/prop/pay-and-delivery.png);
+				@include b(tablet) {
+					background-size: contain;
+				}
+				@include b(mobile) {
+					height: 300px;
+					background-position: -35px center;
+					background-size: 110%;
+				}
+			}
+
+			.delivery-pay_info {
+				&_title {
+					text-align: center;
+					text-transform: uppercase;
+					color: white;
+					font-weight: 700;
+					font-size: 40px;
+					padding-bottom: 5px;
+
+					br {
+						display: none;
+
+						@include b(mobile) {
+							display: block;
+						}
+					}
+
+					@include b(mobile) {
+						font-size: 24px;
+						line-height: 1.2;
+					}
+
+					a {
+						color: #FFD300;
+					}
+				}
+
+				&_text {
+					color: #CBCBCD;
+					text-align: center;
+					line-height: 1;
+					font-weight: 700;
+					font-size: 18px;
+
+					@include b(mobile) {
+						font-size: 16px;
+						margin-top: 15px;
+
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}

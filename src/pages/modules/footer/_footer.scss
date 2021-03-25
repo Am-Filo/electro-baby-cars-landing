@@ -1,0 +1,200 @@
+footer {
+	background-color: #340060;
+	box-shadow: inset 0px 1px 10px black;
+
+	.container {
+		@include b(tablet){
+			width: 100%;
+		}
+		.footer_wrap {
+			display: flex;
+			justify-content: space-between;
+
+			.footer_sticker {
+				width: 250px;
+				height: 125px;
+				background-image: url(../img/prop/footer-stick.png);
+				background-repeat: no-repeat;
+				background-position: 0 0;
+			}
+
+			&_dialer-location {
+				display: flex;
+				line-height: 1;
+				font-weight: 600;
+				font-size: 12px;
+				margin-top: 10px;
+				flex-direction: column;
+				color: white;
+
+				.cards {
+					display: flex;
+					align-items: center;
+					margin-top: 10px;
+					margin-left: 12px;
+
+					&_text {
+						font-weight: 600;
+						font-size: 12px;
+					}
+
+					&_visa {
+						display: block;
+						//width: 31px;
+						width: 40px;
+						height: 10px;
+						background-image: url(../img/icon/visa.png);
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+
+					&_mastercard {
+						display: block;
+						width: 25px;
+						//width: 40px;
+						height: 15px;
+						background-image: url(../img/icon/mastercard.png);
+						background-repeat: no-repeat;
+						background-position: center;
+					}
+
+				}
+
+				@include b(mobile) {
+					display: none;
+				}
+
+				.dialer-location {
+					display: flex;
+
+					.dealer {
+						display: flex;
+
+						@include before-img(inline-block, 70px, 33px, r) {
+							background-image: url(../img/icon/certificat.png);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+					}
+
+					.location {
+						display: flex;
+						margin-left: 10px;
+
+						&_city {
+							border-bottom: 1px solid #ffffff;
+						}
+
+						@include before-img(inline-block, 30px, 26px, r) {
+							background-image: url(../img/icon/location.png);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+					}
+				}
+			}
+
+			&_contacts-info {
+				text-align: right;
+
+				.phone {
+					display: flex;
+					justify-content: flex-end;
+					margin: 10px 0 5px 0;
+
+					a {
+						color: white;
+						font-weight: 600;
+						font-size: 18px;
+						display: flex;
+						justify-content: center;
+
+						.number {
+							font-weight: bold;
+							margin-left: 5px;
+						}
+
+						@include before-img(inline-block, 20px, 26px, r) {
+							background-image: url(../img/icon/phone-2.png);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+					}
+				}
+
+				.messengers {
+					display: flex;
+					justify-content: flex-end;
+
+					a {
+						.telegram {
+							display: block;
+							width: 20px;
+							height: 15px;
+							background-image: url(../img/icon/telegram.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							margin-right: 10px;
+						}
+
+						.whatsapp {
+							display: block;
+							width: 65px;
+							height: 20px;
+							background-image: url(../img/icon/whatsapp.png);
+							background-repeat: no-repeat;
+							background-position: center;
+							margin-right: 5px;
+						}
+
+						.viber {
+							display: block;
+							width: 45px;
+							height: 20px;
+							background-image: url(../img/icon/viber.png);
+							background-repeat: no-repeat;
+							background-position: center;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.footer-deep {
+		margin-top: 15px;
+		width: 100%;
+		background-color: #1C003A;
+		height: 30px;
+		display: flex;
+		align-items: center;
+
+		.container {
+
+			.footer-deep-wrap {
+				display: flex;
+				justify-content: space-between;
+
+				.site_footer_copyright {
+					font-size: 10px;
+					color: white;
+					padding: 0;
+				}
+
+				.site_creater {
+					font-size: 10px;
+					color: white;
+					padding: 0;
+					margin: 0;
+
+					a {
+						color: white;
+						font-weight: 700;
+						padding: 0;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}

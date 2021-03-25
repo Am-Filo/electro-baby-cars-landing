@@ -1,0 +1,10 @@
+{
+	"name": "dev",
+	"directory": "/assets/libs/",
+	"dependencies": {
+		"jquery": "latest",
+		"vue": "latest",
+		"fancybox": "latest",
+		"swiper": "latest"
+	}
+}

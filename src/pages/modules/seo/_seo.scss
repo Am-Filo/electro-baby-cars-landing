@@ -1,0 +1,47 @@
+.seo {
+	.container-fluid {
+		padding: 0;
+
+		.seo_wrap {
+			text-align: center;
+
+			.seo_title {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 30px;
+				line-height: 1;
+
+				@include b(mobile) {
+					font-size: 25px;
+				}
+
+				@include after-img(inline-block, 100%, 265px, r) {
+					background-repeat: no-repeat;
+					top: -20px;
+					background-position: center;
+					background-image: url(../img/prop/seo.png);
+
+					@include b(mobile) {
+						height: 275px;
+						background-size: 300%;
+					}
+				}
+			}
+		}
+	}
+
+	.container {
+		margin-top: -10px;
+
+		@include b(mobile) {
+			margin-top: -10%;
+		}
+
+		.seo_text {
+			font-weight: 600;
+			line-height: 1.2;
+			font-size: 14px;
+			text-align: justify;
+		}
+	}
+}

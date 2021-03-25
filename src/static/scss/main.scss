@@ -1,0 +1,274 @@
+@import "vars";
+
+// mixins
+@import "mixins";
+
+// fonts
+@import "fonts";
+// libs
+@import "libs";
+// typografy
+@import "typography";
+// develop scss
+@import "_develop/index";
+
+// libs
+@import "../../../assets/libs/swiper/dist/css/swiper.css";
+@import "../../../assets/libs/fancybox/dist/jquery.fancybox.css";
+
+// modules
+@import "../../pages/modules/header/header";
+@import "../../pages/modules/lead-form-top/formtop";
+@import "../../pages/modules/benefits/benefits";
+@import "../../pages/modules/catalog/catalog";
+@import "../../pages/modules/why-buy/whybuy";
+@import "../../pages/modules/consultation/consultation";
+@import "../../pages/modules/reviews/reviews";
+@import "../../pages/modules/seo/seo";
+@import "../../pages/modules/photogallery/photogallery";
+@import "../../pages/modules/delivery-pay/delivery-pay";
+@import "../../pages/modules/we-deliver/we-deliver";
+@import "../../pages/modules/present/present";
+@import "../../pages/modules/form-bottom/form-bottom";
+@import "../../pages/modules/benefits-2/benefits-2";
+@import "../../pages/modules/statistica/statistica";
+@import "../../pages/modules/footer/footer";
+@import "../../pages/modules/modal/modal";
+
+
+.t-purple {
+	color: #8E00A8;
+}
+
+.t-pink {
+	color: #F0074C;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: #9100A8;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: "OpenSans";
+	overflow-x: hidden;
+	color: black;
+
+	input,
+	textarea {
+		border: #666 1px solid;
+		outline: none;
+
+		&:focus:required:invalid {
+			border-color: red;
+		}
+
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+
+.btn-g {
+	margin: 10px;
+	padding: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	@include btn-gradient(white, white, to left, #84fab0, #8fd3f4, #84fab0, right center);
+}
+
+.form-group {
+	margin: 10px 0;
+
+	input {
+		width: 100%;
+		background-color: none;
+		border: none;
+		border-bottom: 1px solid #ADADAD;
+
+		&:active,
+		&:focus {
+			transition: 0.5s;
+			border-bottom: 1px solid #ff266d;
+			box-shadow: 0px 1px 1px -1.5px #ff266d;
+		}
+	}
+
+	&_button {
+		.btn-purple {
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 12px;
+			border-radius: 5px;
+			width: 45%;
+			padding: 10px 0;
+			@include btn-gradient(white, white, to right, #9400A7, #6800A6, #3B009F, right center);
+		}
+
+		.btn-pink {
+			display: block;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 800;
+			font-size: 12px;
+			border-radius: 5px;
+			width: 45%;
+			padding: 10px 0;
+			@include btn-gradient(white, white, to right, #FF2468, #FF1C5F, #ED064A, right center);
+		}
+	}
+
+	&_user {
+		padding-right: 40px;
+		display: flex;
+
+		@include before-img(inline-block, 25px, 26px, r) {
+			background-image: url(../img/icon/user.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 0 10px;
+		}
+	}
+
+	&_phone {
+		padding-right: 40px;
+		display: flex;
+
+		@include before-img(inline-block, 25px, 26px, r) {
+			background-image: url(../img/icon/phone.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 0 10px;
+		}
+	}
+
+	&_checkbox {
+		display: flex;
+		align-items: center;
+		margin-left: 15px;
+
+		.checkbox-text {
+			font-size: 12px;
+			line-height: 1;
+
+			a {
+				text-decoration: underline;
+				color: black;
+			}
+		}
+
+		label.checkbox-label {
+			margin-right: 15px;
+			display: inline-block;
+			vertical-align: middle;
+
+			.checkbox {
+				display: none;
+			}
+
+			.checkbox-custom {
+				position: relative;
+				width: 20px;
+				height: 20px;
+				border: 1px solid #cccccc;
+				border-radius: 2px;
+				display: inline-block;
+				vertical-align: middle;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+				background-color: #fff;
+
+				&:before {
+					content: '\2713';
+					display: block;
+					color: #ffa900;
+					font-size: 20px;
+					margin: 5px 0px 0px 3px;
+					line-height: 0px;
+					-webkit-transform: scale(0);
+					-ms-transform: scale(0);
+					transform: scale(0);
+					-webkit-transition: .3s;
+				}
+			}
+
+			input {
+				margin-right: 15px;
+				height: 20px;
+				width: 20px;
+				border: 1px solid #000;
+				-webkit-border-radius: 10px;
+				border-radius: 10px;
+
+				&:checked {
+					border: 1px solid #ffa900;
+
+					+.checkbox-custom::before {
+						-webkit-transform: scale(1);
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+}
+
+.button-more {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	a {
+		font-weight: bold;
+		border: 2px solid #FFA300;
+		color: #FFA300;
+		border-radius: 30px;
+		text-align: center;
+		width: 250px;
+		height: 50px;
+		text-decoration: underline;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			text-decoration: none;
+			color: white;
+			background-color: #FFA300;
+			transition: 0.5s;
+			box-shadow: 0px 20px 30px -15px #FFA300;
+		}
+	}
+}
+
+//@import "media"; // Always at the end

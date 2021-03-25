@@ -1,0 +1,66 @@
+.benefits {
+	@include b(mobile) {
+		margin-top: 50px;
+	}
+	&_wrap {
+		display: flex;
+		justify-content: space-between;
+		@include b(mobile) {
+			flex-wrap: wrap;
+		}
+		.benefits_item {
+			text-align: center;
+			line-height: 1;
+			width: 20%;
+			@include b(mobile) {
+				width: 50%;
+				margin-bottom: 20px;
+				&:nth-child(2){
+					display: none;
+				}
+			}
+
+			&_title {
+				font-weight: 800;
+				color: #8800A6;
+				font-size: 16px;
+				padding-bottom: 0;
+				padding: 10px 0;
+			}
+
+			[class*=benefits_item__img_]{
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 100%;
+				height: 100px;
+			}
+
+			&__img_mark {
+				background-image: url(../img/prop/mark.png);
+			}
+
+			&__img_delivery {
+				background-image: url(../img/prop/delivery.png);
+			}
+
+			&__img_check {
+				background-image: url(../img/prop/complete-more-2000-orders.png);
+			}
+
+			&__img_map {
+				background-image: url(../img/prop/work-all.png);
+			}
+
+			&__img_warranty {
+				background-image: url(../img/prop/official.png);
+			}
+
+			&_text {
+				color: black;
+				font-size: 16px;
+				padding: 10px 0;
+			}
+		}
+	}
+}

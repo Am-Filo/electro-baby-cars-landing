@@ -1,0 +1,74 @@
+.we-deliver {
+	padding: 50px 0;
+	height: 700px;
+	@include b(tablet){
+		overflow: hidden;
+	}
+
+	@include b(mobile) {
+		padding: 0;
+		height: auto;
+		margin-top: -65px;
+	}
+
+	.container {
+		@include b(mobile) {
+			padding: 0;
+		}
+	}
+
+	.we-deliver_wrap {
+		@include b(mobile) {
+			padding: 420px 0 0 40px;
+			overflow: hidden;
+		}
+
+		@include before-img(inline-block, 120%, 700px, a) {
+
+			background-image: url(../img/prop/cars-box.png);
+			background-repeat: no-repeat;
+			background-position: -40px 0px;
+			margin: 0 30px 0 0;
+			top: -70px;
+			left: 0;
+			z-index: 3;
+
+			@include b(mobile) {
+				height: 460px;
+				background-image: url(../img/car/car-2.png);
+				background-position: -90px 0;
+				top: 0px;
+			}
+		}
+
+		&_time,
+		&_options {
+			font-size: 18px;
+			font-weight: 700;
+			line-height: 1;
+			color: black;
+			display: flex;
+			align-items: center;
+		}
+
+		&_time {
+			@include before-img(inline-block, 95px, 87px, r) {
+				background-image: url(../img/prop/we-deliver-2.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: 0 30px 0 0;
+			}
+		}
+
+		&_options {
+			@include before-img(inline-block, 95px, 95px, r) {
+				background-image: url(../img/prop/we-deliver-1.png);
+				background-repeat: no-repeat;
+				background-position: center;
+				margin: 0 30px 0 0;
+			}
+
+			margin-top: 30px;
+		}
+	}
+}

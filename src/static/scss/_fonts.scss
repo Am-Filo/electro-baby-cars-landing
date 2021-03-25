@@ -1,0 +1,11 @@
+// @include font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular");
+// @include font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold);
+
+// @include font-face("OpenSans", "../fonts/OpenSans/OpenSansBold/OpenSansBold", bold);
+// @include font-face("OpenSans", "../fonts/OpenSans/OpenSansSemibold/OpenSansSemibold", 600);
+// @include font-face("OpenSans", "../fonts/OpenSans/OpenSansExtrabold/OpenSansExtrabold", 800);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Regular");
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Bold", bold);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-Semibold", 600);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-SemiboldItalic", 600, italic);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans-ExtraBold", 800);
